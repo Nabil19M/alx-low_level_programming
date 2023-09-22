@@ -13,12 +13,12 @@ int main(void)
 {
 	int a = 97;
 	int z = 122;
-  int A = 65;
-  int Z = 90;
-  
+	int A = 65;
+	int Z = 90;
+
 	for (; a <= z; a++)
 	putchar(a);
-  for (; A <= Z; A++)
+	for (; A <= Z; A++)
 	putchar(A);
 	putchar('\n');
 	return (0);
