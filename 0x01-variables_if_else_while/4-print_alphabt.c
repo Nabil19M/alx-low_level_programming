@@ -18,6 +18,10 @@ int main(void)
 	{
 	if (a != 113 || a != 101)
 	putchar(a);
+	else
+	{
+		continue;
+	}
 	}
 	putchar('\n');
 	return (0);
