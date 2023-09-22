@@ -1,23 +1,22 @@
-#include <stdlib.h>
 #include <stdio.h>
-/* more headers goes there */
+
 /**
- * main - Entry point
- *
- * Description: 'simple program in c'
- *
- * Return: Always 0 (Success)
+ *  main - Prints numbers between 0 to 9 and letters between a to f.
+ *  Return: Always 0 (Success)
  */
-/* betty style doc for function main goes there */
 int main(void)
 {
-	int a;
+	int i;
 
-	for (a = 0; a < 10; a++)
+	for (i = 48; i < 58; i++)
 	{
-	putchar((a >> 4) & 0xf);
-	putchar((a & 0xf));
+		putchar(i);
+	}
+	for (i = 97; i < 103; i++)
+	{
+		putchar(i);
 	}
 	putchar('\n');
+
 	return (0);
 }
