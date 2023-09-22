@@ -14,8 +14,8 @@ int main(void)
 	int a;
 
 	for (a = 0; a < 10; a++)
-	putchar((i >> 4) & 0xf);
-	putchar((i & 0xf));
+	putchar((a >> 4) & 0xf);
+	putchar((a & 0xf));
 	putchar('\n');
 	return (0);
 }
