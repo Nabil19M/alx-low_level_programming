@@ -16,13 +16,13 @@ int main(void)
 
 	for (; a <= z; a++)
 	{
-	if (a != 113 || a != 101)
+	if (a == 113 || a == 101)
 	{
-	putchar(a);
+		continue;
 	}
 	else
 	{
-		continue;
+		putchar(a);
 	}
 	}
 	putchar('\n');
