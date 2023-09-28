@@ -7,6 +7,9 @@
  * Return: Always 0 (Success)
  */
 /* betty style doc for function main goes there */
+/*
+*  print_alphabet - Prints the alphabet in lowercase.
+*/
 void print_alphabet(void)
 {
 	int a = 97;
