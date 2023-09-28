@@ -7,7 +7,7 @@
  * Return: Always 0 (Success)
  */
 /* betty style doc for function main goes there */
-int main(void)
+void print_alphabet(void)
 {
 	int a = 97;
 	int z = 122;
