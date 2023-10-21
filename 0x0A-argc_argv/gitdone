@@ -1,4 +1,0 @@
-#!/bash/bin
-git add .
-git commit -m "Tasks"
-git push
