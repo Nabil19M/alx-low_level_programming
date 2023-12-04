@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 	int sign = 1;
-	int result = 0, index = 0;
+	unsigned int result = 0, index = 0;
 
 	while (*(s + index) != '\0')
 	{
@@ -21,20 +21,6 @@ int _atoi(char *s)
 		{
 			while (*(s + index) >= '0' && *(s + index) <= '9')
 			{
-				if (sign == 1)
-				{
-					if(result > INT_MAX / 10 || (sign == -1 && result < INT_MIN / 10))
-					{
-					if (sign == -1 && result == INT_MIN / 10)
-					{
-						if ((*(s + index) - '0') > INT_MIN % 10)
-							if (*(s + index) - '0' == 8) 
-						return (INT_MIN);
-					}
-					else
-						return (0);
-					}
-				}
 				result = result * 10 + (*(s + index) - '0');
 				index++;
 			}
