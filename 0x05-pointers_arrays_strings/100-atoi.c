@@ -25,12 +25,7 @@ int _atoi(char *s)
 				{
 					if(result > INT_MAX / 10 || (sign == -1 && result < INT_MIN / 10))
 					{
-					if (sign == 1 && result == INT_MAX / 10)			
-					{
-						if((*(s + index) - '0') > INT_MAX % 10)
-						return (INT_MAX);
-					}
-					else if (sign == -1 && result == INT_MIN / 10)
+					if (sign == -1 && result == INT_MIN / 10)
 					{
 						if ((*(s + index) - '0') > INT_MIN % 10)
 						return (INT_MIN);
