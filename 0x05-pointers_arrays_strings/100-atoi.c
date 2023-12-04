@@ -28,6 +28,7 @@ int _atoi(char *s)
 					if (sign == -1 && result == INT_MIN / 10)
 					{
 						if ((*(s + index) - '0') > INT_MIN % 10)
+							if (*(s + index) - '0' == 8) 
 						return (INT_MIN);
 					}
 					else
@@ -41,6 +42,6 @@ int _atoi(char *s)
 		}
 		index++;
 	}
-	return ((unsigned)result * sign);
+	return (result * sign);
 
 }
