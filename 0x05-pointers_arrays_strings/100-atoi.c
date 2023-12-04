@@ -28,6 +28,6 @@ int _atoi(char *s)
 		}
 		index++;
 	}
-	return (result * sig)n;
+	return (result * sign);
 
 }
