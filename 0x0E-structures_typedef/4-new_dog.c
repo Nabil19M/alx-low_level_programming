@@ -2,20 +2,46 @@
 #include "dog.h"
 
 /**
- * new_dog - Creates a variable of type struct dog.
- * @name: The name of the dog.
- * @age: The age of the dog.
- * @owner: The owner of the dog.
- * Return: A variable of type dog
+ * new_dog - creates a new dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+ *
+ * Return: pointer to new dog
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
+	unsigned int nl, ol, i;
+	dog_t *dog;
 
-	d = malloc(sizeof(dog_t));
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
-	return (d);
+	if (name == NULL || owner == NULL)
+		return (NULL);
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+		return (NULL);
+	for (nl = 0; name[nl]; nl++)
+		;
+	nl++;
+	dog->name = malloc(nl * sizeof(char));
+	if (dog->name == NULL)
+	{
+		free(dog);
+		return (NULL);
+	}
+	for (i = 0; i < nl; i++)
+		dog->name[i] = name[i];
+	dog->age = age;
+	for (ol = 0; owner[ol]; ol++)
+		;
+	ol++;
+	dog->owner = malloc(ol * sizeof(char));
+	if (dog->owner == NULL)
+	{
+		free(dog->name);
+		free(dog);
+		return (NULL);
+	}
+	for (i = 0; i < ol; i++)
+		dog->owner[i] = owner[i];
+	return (dog);
 }
