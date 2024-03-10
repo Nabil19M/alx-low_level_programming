@@ -7,21 +7,22 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0, len = 0, j, counter = 0, freq[100] = {0};
+	int i = 0, len = 0, j, counter = 0, flag = {0};
 
 	while (*(accept + len))
 		len++;
 	while (*(s + i))
 	{
+		flag = 0;
 		for (j = 0; j < len; j++)
-			if (*(s + i) == *(accept + j) && freq[j] == 0)
+			if (*(s + i) == *(accept + j))
 			{
-				freq[j]++;
+				flag++;
 				counter++;
 				break;
 			}
-		if (counter == len)
-			return (i + 1);
+		if (!flag)
+			return (counter);
 		i++;
 	}
 	return (0);
