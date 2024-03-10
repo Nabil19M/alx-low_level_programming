@@ -5,7 +5,7 @@
 * @accept: characters should be located.
 * Return: the bytes in the initial segment of s which consist from accept.
 */
-unsigned int _strspn(const char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	int i = 0, len = 0, j, counter = 0, freq[100] = {0};
 
