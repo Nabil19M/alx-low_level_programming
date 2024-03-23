@@ -7,18 +7,16 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *current = malloc(sizeof(dlistint_t));
 	int count = 0;
 
 	if (h == NULL)
 		return (count);
 	while (h->prev)
 		h = h->prev;
-	*current = *h;
-	while (current)
+	while (h)
 	{
-		printf("%d", current->n);
-		current = current->next;
+		printf("%d", h->n);
+		h = h->next;
 		count++;
 	}
 	return (count);
